@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Zilla_slab_regular";
+    src: url("../fonts/TTF_ZillaSlab_Highlight/ZillaSlabHighlight-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Zilla_slab_bold";
+    src: url("../fonts/TTF_ZillaSlab_Highlight/ZillaSlabHighlight-Bold.ttf");
+}
+
+@font-face {
+    font-family: "ClearSans_regular";
+    src: url("../fonts/TTF_ClearSans/Clearsans-regular.ttf");
+}
+
+body, html {
+    margin: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Begin : Navbar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: ClearSans_regular;
+}
+  
+nav li a:active {
+    text-decoration: underline white;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 2px;
+    font-weight: 600;
+}
+  
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+/* End */
+
+h2 {
+    text-align: center;
+    overflow: hidden;
+    font-family: ClearSans_regular;
+    font-size: 36px;
+}
+
+/* Begin : Line between h2 heading */
+h2:before,
+h2:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+h2:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+h2:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+/* End */
