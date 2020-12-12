@@ -119,12 +119,20 @@ h1:after {
 }
 
 .cards {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: auto;
+    align-content: start;
 }
- 
+
+.card-item {
+    flex: 0 0 auto;
+    margin: 5px;
+    background-color: white;
+}
+
 h2 {
     text-align: center;
     overflow: hidden;
@@ -138,7 +146,7 @@ h2 {
 
 h3 {
     font-family: Zilla_slab_regular;
-    font-size: 26px;
+    font-size: 27px;
     margin-bottom: 25px;
     margin-top: 0px;
     flex-grow: 0;
@@ -175,7 +183,7 @@ img {
     margin-right: 25px;
     flex-grow: 0;
     flex-shrink: 0;
-
+    filter: drop-shadow(4px 4px 6px black);
 }
 img:hover {
    transform: translate(8px, -8px);
