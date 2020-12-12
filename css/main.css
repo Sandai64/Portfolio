@@ -132,6 +132,10 @@ h1:after {
     margin: 5px;
 }
 
+#link:visited {
+    color: inherit;
+}
+
 h2 {
     text-align: center;
     overflow: hidden;
