@@ -42,7 +42,7 @@ nav ul {
     min-height: 100%;
     z-index: -99;
 
-  }
+}
 
 nav li a {
     display: block;
@@ -50,6 +50,7 @@ nav li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: black;
 }
 
 nav li a:hover {
