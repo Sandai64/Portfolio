@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "ClearSans_regular";
-    src: url("../fonts/TTF_ClearSans/Clearsans-regular.ttf");
+    src: url("../fonts/TTF_ClearSans/ClearSans-Medium.woff");
 }
 
 body, html {
@@ -31,9 +31,19 @@ nav ul {
     align-items: center;
     justify-content: center;
     font-family: ClearSans_regular;
+
 }
 
-  
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -99;
+
+  }
+
 nav li a {
     display: block;
     color: white;
@@ -47,14 +57,75 @@ nav li a:hover {
 }
 /* End */
 
+h1 {
+    text-align: center;
+    overflow: hidden;
+    font-family: Zilla_slab_bold;
+    font-size: 47px;
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+/* Begin : Line between h1 heading */
+h1:before,
+h1:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+/* End */
+.title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+ 
 h2 {
     text-align: center;
     overflow: hidden;
-    font-family: ClearSans_regular;
+    font-family: Zilla_slab_regular;
     font-size: 36px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
-/* Begin : Line between h2 heading */
+h3 {
+    font-family: Zilla_slab_regular;
+    font-size: 26px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-align: center;
+}
+
 h2:before,
 h2:after {
     background-color: #000;
@@ -73,4 +144,28 @@ h2:after {
     left: 0.5em;
     margin-right: -50%;
 }
-/* End */
+
+/* Begin : Cards hover effect */
+img {
+    width: 512px;
+    height: 288px;
+    transition: all 0.1s ease;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+}
+img:hover {
+   transform: translate(8px, -8px);
+   box-shadow: -1px 1px  #00ffbf, 
+               -2px 2px  #00ffbf, 
+               -3px 3px  #00ffbf, 
+               -4px 4px  #00ffbf, 
+               -5px 5px  #00ffbf, 
+               -6px 6px  #00ffbf, 
+               -7px 7px  #00ffbf, 
+               -8px 8px  #00ffbf;
+               
+}
