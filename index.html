@@ -7,12 +7,58 @@
 
     <!-- Load font-awesome -->
     <link rel="stylesheet" href="lib/fontawesome-free/css/all.css">
+
+    <!-- This tag is left empty, to be filled by JS later on -->
+    <!-- It sets the color of the :before and :after tags of the headers -->
+    <style id='pseudo-element-color'>
+        
+    </style>
 </head>
-<body>
+<body onload="display_random_video_background()">
     <!-- The video -->
 <video autoplay muted loop id="myVideo">
-    <source src="video/typing.mp4" type="video/mp4">
+    
   </video>
+
+  <script>
+
+    // ARRAY, ID 0 = Nom de la vidéo; ID 1 = Couleur du splash text
+    let list_of_videos = [
+        ["typing.mp4", "black"],
+        ["neon.mp4", "white"]
+    ]
+
+    function display_random_video_background() {
+        // Generate random number
+        var random_number = Math.floor(Math.random() * (list_of_videos.length));
+
+        // Build the HTML tag
+        let video_innerhtml = "<source src='video/" + list_of_videos[random_number][0] + "' type='video/mp4'>";
+
+        document.getElementById("myVideo").innerHTML = video_innerhtml;
+
+        document.getElementById("splashtext_main").style.color = list_of_videos[random_number][1];
+        document.getElementById("splashtext_sub").style.color = list_of_videos[random_number][1];
+        document.getElementById("link").style.color = list_of_videos[random_number][1];
+
+        let drop_shadow_rule = "drop-shadow(2px 2px 3px black)";
+
+        if (list_of_videos[random_number][1] == "white") {
+            // Add a drop shadow to white text on dark backgrounds
+            document.getElementById("splashtext_main").style.filter = drop_shadow_rule;
+            document.getElementById("splashtext_sub").style.filter = drop_shadow_rule;
+            document.getElementById("pseudo-element-color").innerHTML = `
+            h1:before, h1:after, h2:before, h2:after {
+                background-color: #FFFFFF;
+            }
+            `;
+            document.getElementById("link").style.filter = drop_shadow_rule;
+        }
+    }
+</script>
+<p class="mb-0" id="quote_content"></p>
+<footer class="blockquote-footer"><i id="quote_author"></i></footer>
+
 
 <nav>
     <ul>
@@ -25,9 +71,9 @@
 </nav>
 
 <header style="margin-top: 35vh;">
-    <h1>Je suis Erwan Egasse</h1>
-    <h2>Développeur back-end</h2>
-    <h3><a id="link" style="filter: drop-shadow(2px 2px 4px black); color: white;" href="https://sandaidev.github.io/"><i>> main site</i></a></h3>
+    <h1 id='splashtext_main'>Je suis Erwan Egasse</h1>
+    <h2 id='splashtext_sub'>Développeur back-end</h2>
+    <h3><a id="link" href="https://sandaidev.github.io/"><i>> main site</i></a></h3>
 </header>
 
 
