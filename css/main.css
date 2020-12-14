@@ -190,13 +190,14 @@ img {
 }
 img:hover {
    transform: translate(8px, -8px);
-   box-shadow: -1px 1px  #00ffbf, 
-               -2px 2px  #00ffbf, 
-               -3px 3px  #00ffbf, 
-               -4px 4px  #00ffbf, 
-               -5px 5px  #00ffbf, 
-               -6px 6px  #00ffbf, 
-               -7px 7px  #00ffbf, 
-               -8px 8px  #00ffbf;
+   --box-shadow-color-card: #00ffbf;
+   box-shadow: -1px 1px  var(--box-shadow-color-card), 
+               -2px 2px  var(--box-shadow-color-card), 
+               -3px 3px  var(--box-shadow-color-card), 
+               -4px 4px  var(--box-shadow-color-card), 
+               -5px 5px  var(--box-shadow-color-card), 
+               -6px 6px  var(--box-shadow-color-card), 
+               -7px 7px  var(--box-shadow-color-card), 
+               -8px 8px  var(--box-shadow-color-card);
                
 }
